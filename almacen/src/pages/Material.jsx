@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
+import { Link } from "react-router-dom";
 
 const Info= styled.div`
     opacity: 0;
@@ -31,13 +32,6 @@ const Container = styled.div`
     &:hover ${Info}{
         opacity: 1;
     }
-`
-const Circle= styled.div`
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background-color: #E9F3FD;
-    position: absolute;
 `
 const Image= styled.img`
     display: flex;
@@ -83,7 +77,7 @@ const Material = ({item}) => {
             <Image src={item.img} />
             <Info>
                 <Icon>
-                    <QuestionMarkIcon/>
+                    <Link to= "/materialinfo"><QuestionMarkIcon/></Link>
                 </Icon>
             </Info>
             <Title> {item.title} </Title>
